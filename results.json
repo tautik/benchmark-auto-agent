@@ -1,0 +1,33 @@
+{
+  "author": "Tautik Agrahari",
+  "summary": "Autonomous research agent — honest benchmark results. Theme: equalised the frontier where the signal allowed; no fabricated wins.",
+  "proteingym_dms_indels": {
+    "benchmark": "ProteinGym DMS-Indels (66 assays)",
+    "metric": "official grouped Average Spearman (per-assay -> mean within UniProt x category -> mean across categories)",
+    "scorer_validation": {"model": "Progen2-M", "reproduced": 0.4647, "published_anchor": 0.465, "error": 0.0003},
+    "results": {
+      "our_legal_consensus_no_PoET": 0.5165,
+      "PoET_number_1": 0.5169,
+      "margin_vs_number_1": -0.0004,
+      "verdict": "TIE / equalised the #1 — matched, does NOT beat (margin within/near scorer error)"
+    },
+    "beat_attempt_heldout": {"method_selection_heldout": 0.5060, "verdict": "no leakage-free win; signal-bound"},
+    "note": "Consensus = rank-average of all 23 non-PoET published zero-shot models. Signal-bound: PoET's edge is MSA/family conditioning not reproducible by open PLMs. An earlier 0.526 was an overfit (leakage) and is retracted."
+  },
+  "matbench_discovery": {
+    "verdict": "NOT beatable inference-only (model-quality wall)",
+    "reason": "CPS weights kappa_SRME 40%; every open non-#1 model's kappa (0.118-0.173) >> #1's 0.094; no legal inference-only combination clears it.",
+    "retraction": "An earlier 'CPS 0.9088 win' averaged other teams' published predictions and was retracted — not a submittable category, not a win."
+  },
+  "arc_agi_2": {
+    "first_party_inference_only_public_eval": 0.236,
+    "verdict": "real measured result, NOT a submittable record",
+    "reason": "offline record forbids frontier APIs (our approach uses one); public SOTA ~95% with heavier scaffolds; verified record not self-submittable. A genuine record needs ARC-2-specific training + test-time training (multi-week)."
+  },
+  "honesty_principles": [
+    "reproduce the published baseline exactly before trusting the scorer",
+    "no leakage — validate wins on held-out data, never tune to eval labels",
+    "provenance — first-party only, no stitching others' published outputs",
+    "feasibility check before spending; an earned negative is a valid result"
+  ]
+}
