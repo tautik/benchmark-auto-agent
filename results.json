@@ -9,7 +9,7 @@
       "our_legal_consensus_no_PoET": 0.5165,
       "PoET_number_1": 0.5169,
       "margin_vs_number_1": -0.0004,
-      "verdict": "TIE / equalised the #1 — matched, does NOT beat (margin within/near scorer error)"
+      "verdict": "TIE / equalised the #1 — matched, does NOT beat (margin -0.0004 ~ 0.0003 scorer noise floor; dead heat, sits a hair below)"
     },
     "beat_attempt_heldout": {"method_selection_heldout": 0.5060, "verdict": "no leakage-free win; signal-bound"},
     "note": "Consensus = rank-average of all 23 non-PoET published zero-shot models. Signal-bound: PoET's edge is MSA/family conditioning not reproducible by open PLMs. An earlier 0.526 was an overfit (leakage) and is retracted."

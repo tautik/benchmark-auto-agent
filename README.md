@@ -23,10 +23,11 @@ PoET, the #1 model, at 0.5169.** We did not beat it, and we're not claiming we d
 | Progen2-M (single-model baseline, for scorer validation) | **0.4647** (published anchor 0.465 → reproduced exactly) |
 | **Our legal consensus** (rank-average of all 23 non-PoET published models) | **0.5165** |
 | PoET (**#1** on the leaderboard) | 0.5169 |
-| margin vs #1 | **−0.0004** (inside the 0.0003 scorer-reproduction error → a statistical tie) |
+| margin vs #1 | **−0.0004** (≈ the 0.0003 scorer-reproduction noise floor → a statistical dead heat; we sit a hair below) |
 
-**What "equalise" honestly means here.** The margin (−0.0004) is smaller than our scorer's own
-reproduction error (0.0003), so consensus and PoET are a dead heat. We hit the frontier; we didn't clear it.
+**What "equalise" honestly means here.** The gap (−0.0004) is the same order of magnitude as our scorer's
+own reproduction noise floor (0.0003) — both negligible on a 0–1 Spearman scale — so consensus and PoET are
+a **dead heat**, with us a hair below. We hit the frontier; we didn't clear it.
 
 **We then tried, rigorously, to actually beat it — and could not.** Using leakage-free held-out selection
 (pick the method on a training fold, report on a held-out fold), the best legal method lands at **0.506 —

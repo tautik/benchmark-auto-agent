@@ -16,7 +16,7 @@ for b, s in zip(bars, scores):
 ax.axhline(0.5169, ls="--", lw=1, color="#34a853", alpha=0.6)
 ax.set_ylabel("Average Spearman (official grouped scorer)", fontsize=11)
 ax.set_title("ProteinGym DMS-Indels — we EQUALISED the #1, did not beat it\n"
-             "Legal consensus 0.5165  vs  PoET 0.5169  (Δ = −0.0004, within scorer error 0.0003)",
+             "Legal consensus 0.5165  vs  PoET 0.5169  (Δ = −0.0004 ≈ 0.0003 scorer noise → dead heat)",
              fontsize=11.5)
 ax.set_ylim(0.40, 0.54)
 ax.annotate("tie", xy=(1.5, 0.5167), fontsize=11, color="#5f6368", ha="center")
